@@ -31,7 +31,7 @@ class HcmWindow(Ui_MainWindow):
         self.Pay.show()
 
     def add_resident(self):
-        self.resident = ResidentAdd(self.setFlat)
+        self.resident = ResidentAdd(self.setFlat, self)
         self.resident.show()
     def add_flat(self):
         self.Flat = FlatAdd(self.setFlat)
