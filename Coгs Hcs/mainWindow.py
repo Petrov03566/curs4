@@ -11,7 +11,7 @@ from resident import ResidentAdd,DelResident
 class HcmWindow(Ui_MainWindow):
     def __init__(self):
         super().__init__()
-        self.setupUi(self)
+        self.setupUis(self)
         self.currentFlat = 0
         self.db_connection()
         self.pushButton_add_pay.clicked.connect(self.add_pay)
@@ -20,6 +20,7 @@ class HcmWindow(Ui_MainWindow):
         self.pb_change2.clicked.connect(self.change_flat)
 
         self.tableView_2.clicked.connect(self.flat_cellClicked)
+    
         self.pushButton_delete_pay.clicked.connect(self.delete_pay)
         self.pb_delete3.clicked.connect(self.delete_resident)
         self.pb_delete2.clicked.connect(self.delete_flat)
@@ -27,7 +28,7 @@ class HcmWindow(Ui_MainWindow):
         self.flat_id =0
     
     def add_pay(self):
-        self.Pay = PaymenAdd(self.flat_id)
+        self.Pay = PaymenAdd(self.setFlat, self)
         self.Pay.show()
 
     def add_resident(self):
@@ -116,6 +117,7 @@ class HcmWindow(Ui_MainWindow):
         query.setQuery("SELECT * FROM public.flat")
         self.tableView_2.setModel(query)
         self.tableView_2.hideColumn(0)
+        self.tableView_2.selectRow(0)
         stm3 =QSqlTableModel()
         stm3.setTable("flat")
         stm3.select()
@@ -134,6 +136,7 @@ class HcmWindow(Ui_MainWindow):
     def btn_table(self):
         row = self.tableView_2.currentIndex().row()
         self.flat_id = self.tableView_2.model().index(row, 0 ).data()
+
 
 app =QApplication(sys.argv)
 window = HcmWindow()

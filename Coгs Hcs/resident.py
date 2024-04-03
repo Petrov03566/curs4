@@ -1,14 +1,14 @@
-
-from PyQt5.QtSql import QSqlDatabase,QSqlTableModel,QSqlQuery
 from PyQt5 import QtGui
 from PyQt5.QtWidgets import QTableView,QMessageBox, QWidget
 from residentadd import AddResident
 from delresident import Deleteresident
+from table import Ui_MainWindow
+from PyQt5.QtSql import QSqlQueryModel,QSqlQuery
 
 
 
 class ResidentAdd(AddResident):
-    def __init__(self,flat, ParentWindow ):
+    def __init__(self,flat, ParentWindow):
         super().__init__()
         self.setupUi(self)
         self.flat=flat
@@ -16,7 +16,8 @@ class ResidentAdd(AddResident):
         # self.lineEdit_data_bitch.setValidator(QtGui.QIntValidator())
         # self.lineEdit_fio_rt.setValidator(QtGui.QIntValidator())
         self.pb_add_resident.clicked.connect(self.add_resident1)
-
+        
+        
         
 
     def add_resident1(self):
@@ -24,9 +25,12 @@ class ResidentAdd(AddResident):
         self.flat_id = self.ParentWindow.tableView_2.model().index(row, 0 ).data()
         if  len(self.lineEdit_fio_rt.text()) and len(self.lineEdit_pasport_data.text()) and len(self.lineEdit_data_bitch.text()):
                 query_rs = QSqlQuery()
-                query_rs.exec(f"INSERT INTO public.resident(fIo_resident,pasport_data,date_birth,flat_id) VALUES('{self.lineEdit_fio_rt.text()}','{self.lineEdit_pasport_data.text()}','{self.lineEdit_data_bitch.text()}',{self.flat_id})")
+                query_rs.exec(f"INSERT INTO public.resident(fIo_resident,pasport_data,date_birth,flat_id) VALUES('{self.lineEdit_fio_rt.text()}','{self.lineEdit_pasport_data.text()}','{self.lineEdit_data_bitch.text()}','{self.flat_id}');")
                 print(query_rs.lastError().text())
                 self.close()
+        query3 =QSqlQueryModel()
+        query3.setQuery("SELECT * FROM public.resident")
+        self.ParentWindow.tableView_3.setModel(query3)
 
     def update_resident1(self):
         if  self.lineEdit_fio_rt.text() and self.lineEdit_pasport_data.text() and self.lineEdit_data_bitch.text():
@@ -39,9 +43,13 @@ class ResidentAdd(AddResident):
         self.close()
 
 class DelResident(Deleteresident):
-     def __init__(self):
+    def __init__(self):
         super().__init__()
         self.setupUi(self)
+        self.pushButton_no_residents.clicked.connect(self.cansel_dl_resident)
 
 
-        
+    def cansel_dl_resident(self):
+         self.close()
+     
+

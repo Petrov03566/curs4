@@ -49,4 +49,8 @@ class DeleteFlat(Deleteflat):
     def __init__(self):
         super().__init__()
         self.setupUi(self)
-        # self.pb_yes_flat.clicked.connect()
+        self.pushButton_no_flat.clicked.connect(self.cancel_flat)
+        
+
+    def cancel_flat(self):
+        self.close()
