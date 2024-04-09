@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1318</width>
+    <height>883</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>20</y>
+      <width>171</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>15</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>Начальная дата </string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_2">
+    <property name="geometry">
+     <rect>
+      <x>380</x>
+      <y>20</y>
+      <width>151</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>15</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>Конечная дата </string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_generate">
+    <property name="geometry">
+     <rect>
+      <x>910</x>
+      <y>10</y>
+      <width>110</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Сформировать</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_print">
+    <property name="geometry">
+     <rect>
+      <x>1060</x>
+      <y>10</y>
+      <width>90</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Печать</string>
+    </property>
+   </widget>
+   <widget class="QDateEdit" name="dateEdit">
+    <property name="geometry">
+     <rect>
+      <x>190</x>
+      <y>20</y>
+      <width>110</width>
+      <height>27</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QDateEdit" name="dateEdit_2">
+    <property name="geometry">
+     <rect>
+      <x>540</x>
+      <y>20</y>
+      <width>110</width>
+      <height>27</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_3">
+    <property name="geometry">
+     <rect>
+      <x>560</x>
+      <y>120</y>
+      <width>120</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Liberation Mono</family>
+      <pointsize>22</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>Отчет</string>
+    </property>
+   </widget>
+   <widget class="QTableView" name="tableView">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>190</y>
+      <width>1311</width>
+      <height>641</height>
+     </rect>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1318</width>
+     <height>23</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

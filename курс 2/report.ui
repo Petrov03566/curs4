@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Form</class>
+ <widget class="QWidget" name="Form">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1182</width>
+    <height>768</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Отчет</string>
+  </property>
+  <widget class="QLabel" name="title_lbl">
+   <property name="geometry">
+    <rect>
+     <x>540</x>
+     <y>60</y>
+     <width>101</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>20</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="text">
+    <string>Отчет</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="start_date_lbl">
+   <property name="geometry">
+    <rect>
+     <x>60</x>
+     <y>10</y>
+     <width>161</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>15</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>Начальная дата</string>
+   </property>
+  </widget>
+  <widget class="QDateEdit" name="start_dateEdit">
+   <property name="geometry">
+    <rect>
+     <x>220</x>
+     <y>10</y>
+     <width>121</width>
+     <height>31</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QDateEdit" name="end_dateEdit">
+   <property name="geometry">
+    <rect>
+     <x>530</x>
+     <y>10</y>
+     <width>121</width>
+     <height>31</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLabel" name="end_date_lbl">
+   <property name="geometry">
+    <rect>
+     <x>380</x>
+     <y>10</y>
+     <width>151</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>15</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>Конечная дата</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="create_btn">
+   <property name="geometry">
+    <rect>
+     <x>730</x>
+     <y>10</y>
+     <width>141</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>13</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton{
+border-radius: 9px;
+border: 2px solid black;
+background-color: rgb(255, 255, 255);
+}
+QPushButton:hover{
+border-radius: 9px;
+border: 2px solid black;
+background-color: rgb(246, 245, 244);
+}</string>
+   </property>
+   <property name="text">
+    <string>Сформировать</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="print_btn">
+   <property name="geometry">
+    <rect>
+     <x>900</x>
+     <y>10</y>
+     <width>91</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>13</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton{
+border-radius: 9px;
+border: 2px solid black;
+background-color: rgb(255, 255, 255);
+}
+QPushButton:hover{
+border-radius: 9px;
+border: 2px solid black;
+background-color: rgb(246, 245, 244);
+}</string>
+   </property>
+   <property name="text">
+    <string>Печать</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="subtitle_lbl">
+   <property name="geometry">
+    <rect>
+     <x>290</x>
+     <y>100</y>
+     <width>611</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>15</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QTableView" name="tableView">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>140</y>
+     <width>1161</width>
+     <height>611</height>
+    </rect>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
